@@ -14,7 +14,7 @@ import com.nt.service.IService;
 public class OperationController {
 	@Autowired
      private IService serv;
-	@PostMapping("/sendTree")
+	@PostMapping("/send")
 	public ResponseEntity<Tree> storeData(@RequestBody Tree tree){
 		 Tree saveData = serv.saveData(tree);
 		return new ResponseEntity<>(saveData,HttpStatus.CREATED);
